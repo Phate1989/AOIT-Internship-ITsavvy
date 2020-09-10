@@ -2,14 +2,20 @@ import csv
 
 
 with open('Bundle_Spreadsheet.csv', 'r') as file:
-    reader = csv.reader(file)
+    reader = csv.DictReader(file)
     line_count = 0
-    list = []
+    List = []
     for row in reader:
-        list.append(row)
-        print(row)
-    print()
-    print(list)
-    print()
-    print(list[0][0])
+        List.append(row)
+    #    print(row)
+
+
+# print()
+    # print(list)
+    # print()
+    # print(list[0][0])
+
+for lines in List:
+    print(lines['Office 365 E3'])
+
 
